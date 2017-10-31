@@ -7,10 +7,7 @@ package ezesoftware;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -50,7 +47,7 @@ public class EmployeeTest {
     public void testRemoveReportees() {
         String name = "Alex";
         reportees.add(name);
-        List<String> exp = null;
+        List<String> exp = new ArrayList<>();
         reportees.remove("Alex");
         List<String> result = reportees;
         try{

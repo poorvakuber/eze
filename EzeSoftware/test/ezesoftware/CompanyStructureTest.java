@@ -5,13 +5,12 @@
  */
 package ezesoftware;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
 
 /**
  *
@@ -22,6 +21,11 @@ public class CompanyStructureTest {
     CompanyStructure testInstance;
     
     public CompanyStructureTest() {
+    }
+    
+    @Before
+    public void setUp() {
+        testInstance = new CompanyStructure();
     }
 
     @Test
@@ -40,7 +44,6 @@ public class CompanyStructureTest {
 
     @Test
     public void testGetReportees() {
-        System.out.println("getReportees");
         String name = "Alex";
         List<String> orgStructureList = null;
         CompanyStructure instance = new CompanyStructure();
