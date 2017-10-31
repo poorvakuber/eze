@@ -14,11 +14,9 @@ import java.util.List;
  */
 public class Employee {
     
-//    private final String name;
     private final List<String> reportees;
     
-    public Employee(String name){
-//        this.name = name;
+    public Employee(){
         this.reportees = new ArrayList<>();
     }
     

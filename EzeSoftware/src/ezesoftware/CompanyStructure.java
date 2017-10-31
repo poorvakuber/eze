@@ -35,7 +35,7 @@ public class CompanyStructure {
     }
 
     public List<String> getReportees(String name, List<String> orgStructureList) {
-        if (structure.isEmpty()) {
+        if (orgStructureList == null || orgStructureList.isEmpty()) {
             return null;
         }
         List<String> reporteeList = new ArrayList<>();

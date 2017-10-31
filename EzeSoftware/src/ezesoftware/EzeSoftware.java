@@ -16,11 +16,9 @@ public class EzeSoftware {
      */
     public static void main(String[] args) {
         CompanyStructure company = new CompanyStructure();
-        Employee a = new Employee("Alex");
-//        Employee b = new Employee("Sam");
-        Employee c = new Employee("Ed");
-        Employee d = new Employee("George");
-//        Employee e = new Employee("Olivia");
+        Employee a = new Employee();    // Alex
+        Employee c = new Employee();    // Ed
+        Employee d = new Employee();    // George
         a.addReportees("Sam");
         a.addReportees("Ed");
         c.addReportees("George");
@@ -28,7 +26,7 @@ public class EzeSoftware {
         company.addEmployees("Alex", a);
         company.addEmployees("Ed", c);
         company.addEmployees("George", d);
-        System.out.println(company.getReportees("Alex", null));
+        System.out.println(company.getList("Ed"));
     }
     
 }
