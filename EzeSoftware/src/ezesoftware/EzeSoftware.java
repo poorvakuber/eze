@@ -26,7 +26,7 @@ public class EzeSoftware {
         company.addEmployees("Alex", a);
         company.addEmployees("Ed", c);
         company.addEmployees("George", d);
-        System.out.println(company.getList("Ed"));
+        System.out.println(company.getList("Alex"));
     }
     
 }

@@ -7,6 +7,8 @@ package ezesoftware;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -39,17 +41,20 @@ public class CompanyStructure {
             return null;
         }
         List<String> reporteeList = new ArrayList<>();
+        HashSet<String> list = new LinkedHashSet();
         Queue<String> employeeQueue = new LinkedList<>(orgStructureList);
         while (!employeeQueue.isEmpty()) {
             String currentEmployee = employeeQueue.remove();
+            list.add(currentEmployee);
             if (structure.containsKey(currentEmployee)) {
                 List<String> temp = structure.get(currentEmployee).getReportees();
                 if (!temp.isEmpty()) {
                     employeeQueue.addAll(temp);
-                    reporteeList.addAll(temp);
+                    list.addAll(temp);
                 }
             }
         }
+        reporteeList.addAll(list);
         return reporteeList;
     }
 }
