@@ -21,8 +21,13 @@ public class EzeSoftware {
         Employee d = new Employee();    // George
         a.addReportees("Sam");
         a.addReportees("Ed");
+        a.addReportees("Martin");
         c.addReportees("George");
+        c.addReportees("Crane");
+        c.addReportees("Kathy");
         d.addReportees("Olivia");
+        d.addReportees("Jerry");
+        d.addReportees("Phil");
         company.addEmployees("Alex", a);
         company.addEmployees("Ed", c);
         company.addEmployees("George", d);
